@@ -5,28 +5,42 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #222;
   line-height: 1.6;
 }
 
+/* ================= HEADER ================= */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 10%;
+  align-items: center;
+  padding: 18px 8%;
   background: #fff;
   position: sticky;
   top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 1.5rem;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 18px;
   text-decoration: none;
   color: #333;
+  font-size: 0.95rem;
 }
 
+/* ================= HERO ================= */
 .hero {
-  padding: 90px 10%;
+  padding: 80px 8%;
 }
 
 .hero h1 {
@@ -38,17 +52,23 @@ nav a {
   margin: 10px 0;
 }
 
+.hero p {
+  max-width: 600px;
+}
+
 .hero-btns {
   margin-top: 20px;
 }
 
+/* ================= BUTTONS ================= */
 .btn {
   background: #4f46e5;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border-radius: 6px;
   text-decoration: none;
   margin-right: 10px;
+  display: inline-block;
 }
 
 .secondary {
@@ -56,22 +76,25 @@ nav a {
   color: #111;
 }
 
+/* ================= SECTIONS ================= */
 .section {
-  padding: 70px 10%;
+  padding: 70px 8%;
 }
 
 .light {
   background: #f9fafb;
 }
 
+/* ================= SKILLS ================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
 }
 
+/* ================= PROJECTS ================= */
 .case-study {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .subtitle {
@@ -105,9 +128,102 @@ nav a {
   border: 1px solid #ddd;
 }
 
+/* ================= CONTACT ================= */
+#contact p {
+  margin-top: 10px;
+}
+
+#contact a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 18px;
   background: #111;
   color: white;
+  font-size: 0.9rem;
+}
+
+/* ================================================= */
+/* =============== RESPONSIVE STYLES ================ */
+/* ================================================= */
+
+/* -------- TABLET -------- */
+@media (max-width: 992px) {
+  header {
+    padding: 16px 6%;
+  }
+
+  .hero {
+    padding: 70px 6%;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+
+  .work-sample iframe {
+    height: 300px;
+  }
+}
+
+/* -------- SMALL MOBILE -------- */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  .work-sample iframe {
+    height: 250px;
+  }
 }
